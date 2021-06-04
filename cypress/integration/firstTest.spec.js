@@ -3,10 +3,10 @@
 describe('My first Test', () => {
     
     beforeEach(() => {
-        cy.visit("https://demoqa.com/")
+        cy.visitPage()
     })
    
-    it('verify if enter on web page', ()=>{
+    it('Testing elements - text box functionalities', ()=>{
         cy.contains('Elements').click()
         cy.url().should('eq', 'https://demoqa.com/elements')
     })
