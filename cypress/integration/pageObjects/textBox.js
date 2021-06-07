@@ -1,23 +1,25 @@
-class TextBox {
+class TextBoxForm {
    
-    fillForm(){
-        return cy.get('#userForm').then(form => {
-            cy.wrap(form).find('[id="userName"]').type('CarolTest')
-            cy.wrap(form).find('[id="userEmail"]').type('automationtestercarol@gmail.com')
-            cy.wrap(form).find('[id="currentAddress"]').type('street')
-            cy.wrap(form).find('[id="permanentAddress"]').type('street2')
-            cy.wrap(form).find('[id="submit"]').click()
-        })
+    fillFullName(){
+        cy.get('[id="userName"]').type('CarolTest')
+    }
+
+    fillEmail(){
+        cy.get('[id="userEmail"]').type('automationtestercarol@gmail.com')
+    }
+
+    fillCurrentAddress(){
+        cy.get('[id="currentAddress"]').type('street')
+    }
+
+    fillPermanentAddress(){
+        cy.get('[id="permanentAddress"]').type('street2')
+    }
+
+    submitFormTextBox() {
+        cy.get('[id="submit"]').click()
     }
 }
 
+export default TextBoxForm
 
-
-
-// cy.get('#output').then( output => {
-        //     console.log(output)
-        //     // cy.wrap(output)
-        //     // cy.wrap(output)
-        //     // cy.wrap(output)
-        // })
-export default TextBox

@@ -1,9 +1,9 @@
 /// <reference types="cypress"/>
-import TextBox from '../pageObjects/textBox'
+import TextBoxForm from '../pageObjects/textBox'
 import NavigatePage from '../pageObjects/navigatePage'
 
 const navigatePage = new NavigatePage()
-const textBox = new TextBox()
+const textBox = new TextBoxForm()
 
 
 
@@ -20,7 +20,11 @@ describe('My first Test', () => {
 
     it.only('Testing elements - text box functionalities', ()=>{
         navigatePage.textBoxElement()
-        textBox.fillForm()
+        textBox.fillFullName()
+        textBox.fillEmail()
+        textBox.fillCurrentAddress()
+        textBox.fillPermanentAddress()
+        textBox.submitFormTextBox()
     })
     
 })
