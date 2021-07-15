@@ -8,7 +8,7 @@
     "cypress:open": "cypress open"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ana Carolina Oliveira dos Santos",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^7.4.0",

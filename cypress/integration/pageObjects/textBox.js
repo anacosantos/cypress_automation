@@ -1,25 +1,48 @@
 class TextBoxForm {
+
+    getName(){
+        return cy.get('[id="userName"]')
+    }
    
-    fillFullName(){
-        cy.get('[id="userName"]').type('CarolTest')
+    fillFullName(name){
+        return this.getName().type(name)
     }
 
-    fillEmail(){
-        cy.get('[id="userEmail"]').type('automationtestercarol@gmail.com')
+    fillEmail(email){
+        cy.get('[id="userEmail"]').type(email)
     }
 
-    fillCurrentAddress(){
-        cy.get('[id="currentAddress"]').type('street')
+    fillCurrentAddress(currentAddress){
+        cy.get('[id="currentAddress"]').type(currentAddress)
     }
 
-    fillPermanentAddress(){
-        cy.get('[id="permanentAddress"]').type('street2')
+    fillPermanentAddress(permanentAddress){
+        cy.get('[id="permanentAddress"]').type(permanentAddress)
     }
 
-    submitFormTextBox() {
+    submitButtonTextBox() {
         cy.get('[id="submit"]').click()
     }
+
+    filledFullName(){
+        cy.get('#name')
+        return this
+    }
+
+    // filledEMail(){
+    //     cy.get('#email').should('contain', 'automationtestercarol@gmail.com' )
+    // }
+
+    // filledCurrentAddress(){
+    //     cy.get('.border #currentAddress').should('contain', 'street')
+    // }
+
+    // filledPermanentAddress(){
+    //     cy.get('.border #permanentAddress').should('contain', 'street2')
+    // }
 }
+
+
 
 export default TextBoxForm
 
