@@ -23,23 +23,6 @@ class TextBoxForm {
     submitButtonTextBox() {
         cy.get('[id="submit"]').click()
     }
-
-    filledFullName(){
-        cy.get('#name')
-        return this
-    }
-
-    // filledEMail(){
-    //     cy.get('#email').should('contain', 'automationtestercarol@gmail.com' )
-    // }
-
-    // filledCurrentAddress(){
-    //     cy.get('.border #currentAddress').should('contain', 'street')
-    // }
-
-    // filledPermanentAddress(){
-    //     cy.get('.border #permanentAddress').should('contain', 'street2')
-    // }
 }
 
 
