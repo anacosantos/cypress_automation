@@ -30,4 +30,29 @@ describe('Filling Text Box', () => {
         cy.get('.border #currentAddress').should('contain', 'street')
         cy.get('.border #permanentAddress').should('contain', 'street2')   
    })  
+
+   it('Testing using surname instead of Full Name', () => {
+        navigatePage.textBoxElement()
+        textBox.fillFullName('Carol')
+        textBox.fillEmail('automationtestercarol@gmail.com')
+        textBox.fillCurrentAddress('street')
+        textBox.fillPermanentAddress('street2')
+        textBox.submitButtonTextBox()
+        cy.get('#name').should('contain', 'Carol')
+        cy.get('#email').should('contain', 'automationtestercarol@gmail.com' )
+        cy.get('.border #currentAddress').should('contain', 'street')
+        cy.get('.border #permanentAddress').should('contain', 'street2')   
+    })
+
+    it('Check if fill in the text box form with wrong email without @ will be aceepted in the field', () => {
+        navigatePage.textBoxElement()
+        textBox.fillFullName('CarolTest')
+        textBox.fillEmail('automationtestercarolgmail.com')
+        textBox.fillCurrentAddress('street')
+        textBox.fillPermanentAddress('street2')
+        textBox.submitButtonTextBoxMultipleClick()
+        cy.get('[id="userEmail"]').invoke('attr', 'class').should('contain', 'field-error')  
+    })
+        
+   
 })

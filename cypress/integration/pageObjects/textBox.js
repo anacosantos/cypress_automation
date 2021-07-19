@@ -23,6 +23,10 @@ class TextBoxForm {
     submitButtonTextBox() {
         cy.get('[id="submit"]').click()
     }
+
+    submitButtonTextBoxMultipleClick() {
+        cy.get('[id="submit"]').click({ multiple: true })
+    }
 }
 
 
