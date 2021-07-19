@@ -18,3 +18,6 @@ cypress.json:
     "viewportHeight": 1080,
     "viewportWidth": 1920
 }
+
+I created 2 branches, master and development.
+I'm using branch development to do each test and then pull request to release them.
